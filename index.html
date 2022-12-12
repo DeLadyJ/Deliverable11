@@ -4,27 +4,21 @@
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.0/dist/full.css" rel="stylesheet" type="text/css" />
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
         <script>
-            function vali() {
-  // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/;
-  if(document.getElementById("pwd").value.match(lowerCaseLetters)) {  
-    //document.getElementById("letter").classList.remove("invalid");
-    //document.getElementById("letter").classList.add("valid");
-    document.getElementById("reply").value = "looks good";
-  } else {
-    document.getElementById("reply").value = "try again";  }
-}   
- /* function reply(){
-    let x = document.getElementById('pwd').value;
-    let y = eval(x);
-    document.getElementById('pwd').value = y;
-  }*/
-        </script>
+            function lowerClass() {
+                // Validate lowercase letters
+                let lowerCaseLetters = /[a-z]g/;
+                let pswValue = document.getElementById("pwd").value ;
+                if (pswValue.match(lowerCaseLetters)) {  
+                  let reply = looks good;
+                  //document.getElementById("reply").value = "looks good";
+                }
+
+            </script>
 
     </head>
     <body>
-        <input class="border-2" type="text" id="pwd" value="">
-        <br>
+        <input class="border-2" type="text" id="pwd" value=""><br>
         <input class="border-2" type="text" id="reply" value="">
+        <button onclick="lowerClass()"></button>
     </body>
 </html> 
