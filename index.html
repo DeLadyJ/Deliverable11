@@ -8,7 +8,12 @@
             let pwdValue = document.getElementById("pwd").value; 
             let lowerCasePattern = /[a-z]/g;
             let lowerCaseAns = lowerCasePattern.test(pwdValue);
-            document.getElementById("msgLC").innerHTML = lowerCaseAns;
+            //document.getElementById("msgLC").innerHTML = lowerCaseAns;
+            if (lowerCaseAns === true) {
+                document.getElementById("msgLC").innerHTML = "great you have lowercase"; 
+            }   else {
+                document.getElementById("msgLC").innerHTML = "oops no lowercase";
+            }
           } 
           function ucCheck() {
             let pwdValue = document.getElementById("pwd").value;
