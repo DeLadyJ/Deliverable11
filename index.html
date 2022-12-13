@@ -46,15 +46,26 @@
             }
             
           }
+          function clrCheck() {
+            let pwdValue = document.getElementById("pwd").value;
+            if (lowerCaseAns===true || false) {
+                document.getElementById("pwdValue").value = "";
+            }
+            
+          }
     </script>
     </head>
     <body>
-        <input id="pwd">
-        <button onclick="lcCheck();ucCheck();numCheck();lenCheck()">submit</button>
-        <div id="msgLC"></div>
-        <div id="msgUC"></div>
-        <div id="msgNB"></div>
-        <div id="msgLN"></div>
+        <h1 class="text-md font-violet-700 text-center">Submit Form</h1>
+            <input id="pwd">
+            <button class="border-2 border-blue-500" onclick="lcCheck();ucCheck();numCheck();lenCheck()">Submit</button>
+            <button onclick="clrCheck()">Clear</button>
+        <div>
+            <div id="msgLC"></div>
+            <div id="msgUC"></div>
+            <div id="msgNB"></div>
+            <div id="msgLN"></div>
+        </div>
       
     </body>
 </html>
