@@ -3,25 +3,43 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.0/dist/full.css" rel="stylesheet" type="text/css" />
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-        <script>
-            function lowerCase() {
-                // Validate lowercase letters
-                let lowerCaseLetters = /[a-z]g/;
-                let pswValue = document.getElementById("pwd").value;
-                if (pswValue.match(lowerCaseLetters)) {  
-                    document.getElementById("msg").innerHTML= "reply";
-                    return true;
-                } 
+    <script>
+          function lcCheck() {
+            let pwdValue = document.getElementById("pwd").value; 
+            let lowerCasePattern = /[a-z]/g;
+            let lowerCaseAns = lowerCasePattern.test(pwdValue);
+            document.getElementById("msgLC").innerHTML = lowerCaseAns;
+          } 
+          function ucCheck() {
+            let pwdValue = document.getElementById("pwd").value;
+            let upperCasePattern = /[A-Z]/g;
+            let upperCaseAns = upperCasePattern.test(pwdValue);
+            document.getElementById("msgUC").innerHTML = upperCaseAns;
+          }
+          function numCheck() {
+            let pwdValue = document.getElementById("pwd").value;
+            let numPattern = /[0-9]/g;
+            let numAns = numPattern.test(pwdValue);
+            document.getElementById("msgNB").innerHTML = numAns;
+          }
+          function lenCheck() {
+            let pwdValue = document.getElementById("pwd").value;
+            if (pwdValue.lenght>=8) {
+                document.getElementById("msgLN").innerHTML = "passord is long enough";
+            }   else {
+                document.getElementById("msgLN").innerHTML = "too short";
             }
-            function reply (){
-                let aswValue = document.getElementById("msg").innerHTML = "looks good";
-            }
-            </script>
+            
+          }
+    </script>
     </head>
     <body>
         <input id="pwd">
-        <button onclick="lowerCase()">Submit</button>
-        <input id="msg">
-        <button onclick="reply()"></button>
+        <button onclick="lcCheck();ucCheck();numCheck();lenCheck()">submit</button>
+        <div id="msgLC"></div>
+        <div id="msgUC"></div>
+        <div id="msgNB"></div>
+        <div id="msgLN"></div>
+      
     </body>
 </html>
