@@ -9,17 +9,19 @@
                 let lowerCaseLetters = /[a-z]g/;
                 let pswValue = document.getElementById("pwd").value;
                 if (pswValue.match(lowerCaseLetters)) {  
-                    document.getElementById("msg").innerHTML= "looks good";
+                    document.getElementById("msg").innerHTML= "reply";
                     return true;
                 } 
             }
-
-            
+            function reply (){
+                let aswValue = document.getElementById("msg").innerHTML = "looks good";
+            }
             </script>
     </head>
     <body>
         <input id="pwd">
-        <button onclick="lowerCase()"></button>
+        <button onclick="lowerCase()">Submit</button>
         <input id="msg">
+        <button onclick="reply()"></button>
     </body>
 </html>
