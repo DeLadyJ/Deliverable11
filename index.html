@@ -14,13 +14,23 @@
             let pwdValue = document.getElementById("pwd").value;
             let upperCasePattern = /[A-Z]/g;
             let upperCaseAns = upperCasePattern.test(pwdValue);
-            document.getElementById("msgUC").innerHTML = upperCaseAns;
+            //document.getElementById("msgUC").innerHTML = upperCaseAns;
+            if (upperCaseAns === true) {
+                document.getElementById("msgUC").innerHTML = "great you have uppercase"; 
+            }   else {
+                document.getElementById("msgUC").innerHTML = "oops no uppercase";
+            }
           }
           function numCheck() {
             let pwdValue = document.getElementById("pwd").value;
             let numPattern = /[0-9]/g;
             let numAns = numPattern.test(pwdValue);
-            document.getElementById("msgNB").innerHTML = numAns;
+           // document.getElementById("msgNB").innerHTML = numAns;
+           if (numAns === true) {
+            document.getElementById("msgNB").innerHTML = "great you have numbers";
+           }    else {
+            document.getElementById("msgNB").innerHTML = "oops no numbers";
+           }
           }
           function lenCheck() {
             let pwdValue = document.getElementById("pwd").value;
