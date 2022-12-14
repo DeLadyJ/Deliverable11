@@ -8,7 +8,6 @@
             let pwdValue = document.getElementById("pwd").value; 
             let lowerCasePattern = /[a-z]/g;
             let lowerCaseAns = lowerCasePattern.test(pwdValue);
-            //document.getElementById("msgLC").innerHTML = lowerCaseAns;
             if (lowerCaseAns === true) {
                 document.getElementById("msgLC").innerHTML = "great you have lowercase"; 
             }   else {
@@ -19,7 +18,6 @@
             let pwdValue = document.getElementById("pwd").value;
             let upperCasePattern = /[A-Z]/g;
             let upperCaseAns = upperCasePattern.test(pwdValue);
-            //document.getElementById("msgUC").innerHTML = upperCaseAns;
             if (upperCaseAns === true) {
                 document.getElementById("msgUC").innerHTML = "great you have uppercase"; 
             }   else {
@@ -30,7 +28,7 @@
             let pwdValue = document.getElementById("pwd").value;
             let numPattern = /[0-9]/g;
             let numAns = numPattern.test(pwdValue);
-           // document.getElementById("msgNB").innerHTML = numAns;
+           
            if (numAns === true) {
             document.getElementById("msgNB").innerHTML = "great you have numbers";
            }    else {
@@ -44,7 +42,6 @@
             }   else {
                 document.getElementById("msgLN").innerHTML = "too short";
             }
-            
           }
           function clrCheck() {
             let pwdValue = document.getElementById("pwd").value;
@@ -53,7 +50,6 @@
             } else {
                 document.getElementById("pwdValue").value = ""; 
             }
-            //< onclick="lcCheck();ucCheck();numCheck();lenCheck()">Submit</button>
           }
     </script>
     </head>
