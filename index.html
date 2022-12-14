@@ -39,7 +39,7 @@
           }
           function lenCheck() {
             let pwdValue = document.getElementById("pwd").value;
-            if (pwdValue.lenght >=8) {
+            if (pwdValue.length >=8) {
                 document.getElementById("msgLN").innerHTML = "password is long enough";
             }   else {
                 document.getElementById("msgLN").innerHTML = "too short";
@@ -48,7 +48,10 @@
           }
           function clrCheck() {
             let pwdValue = document.getElementById("pwd").value;
-            if (lowerCaseAns===true || false) {
+            if (lowerCaseAns===true || false) 
+            if (upperCaseAns===true || false)
+            if (numAns===true || false)
+            if (pwdValue.length >=8===true || false) {
                 document.getElementById("pwdValue").value = "";
             }
             
