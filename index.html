@@ -48,10 +48,10 @@
             let lowerCasePattern = /[a-z]/g;
             let lowerCaseAns = lowerCasePattern.test(pwdValue);
             if (lowerCaseAns===true || upperCaseAns===true || numAns===true || pwdValue.length >=8===true) {
-                document.getElementById("pwdValue").value = "";
-            } else {
-                document.getElementById("pwdValue").value = ""; 
-            }*/
+                document.getElementById("msgLC").innerHTML = "";
+            } else { */
+                document.getElementById("msgLC").innerHTML = ""; 
+          //  }
             document.getElementById("pwd").value = '';
           }
     </script>
