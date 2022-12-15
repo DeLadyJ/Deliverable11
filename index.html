@@ -3,8 +3,9 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.0/dist/full.css" rel="stylesheet" type="text/css" />
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-    <script>
-          function lcCheck() {
+        <script scr="val.js"></script>
+        <script>
+                    function lcCheck() {
             let pwdValue = document.getElementById("pwd").value; 
             let lowerCasePattern = /[a-z]/g;
             let lowerCaseAns = lowerCasePattern.test(pwdValue);
@@ -13,8 +14,8 @@
             }   else {
                 document.getElementById("msgLC").innerHTML = "oops no lowercase";
             }
-          } 
-          function ucCheck() {
+        } 
+                    function ucCheck() {
             let pwdValue = document.getElementById("pwd").value;
             let upperCasePattern = /[A-Z]/g;
             let upperCaseAns = upperCasePattern.test(pwdValue);
@@ -23,40 +24,40 @@
             }   else {
                 document.getElementById("msgUC").innerHTML = "oops no uppercase";
             }
-          }
-          function numCheck() {
+        }
+                    function numCheck() {
             let pwdValue = document.getElementById("pwd").value;
             let numPattern = /[0-9]/g;
             let numAns = numPattern.test(pwdValue);
-           
-           if (numAns === true) {
-            document.getElementById("msgNB").innerHTML = "great you have numbers";
-           }    else {
-            document.getElementById("msgNB").innerHTML = "oops no numbers";
-           }
-          }
-          function lenCheck() {
+        
+        if (numAns === true) {
+                document.getElementById("msgNB").innerHTML = "great you have numbers";
+        }    else {
+                document.getElementById("msgNB").innerHTML = "oops no numbers";
+        }
+        }
+                    function lenCheck() {
             let pwdValue = document.getElementById("pwd").value;
             if (pwdValue.length >=8) {
                 document.getElementById("msgLN").innerHTML = "password is long enough";
             }   else {
                 document.getElementById("msgLN").innerHTML = "too short";
             }
-          }
-          function clrCheck() {
+        }
+                    function clrCheck() {
                 document.getElementById("pwd").value = '';
-                document.getElementById("msgLC").innerHTML = "";
-                document.getElementById("msgUC").innerHTML = "";
-                document.getElementById("msgNB").innerHTML = "";
-            document.getElementById("msgLN").innerHTML = "";
-          }
-    </script>
+                document.getElementById("msgLC").innerHTML = '';
+                document.getElementById("msgUC").innerHTML = '';
+                document.getElementById("msgNB").innerHTML = '';
+                document.getElementById("msgLN").innerHTML = '';
+        }
+        </script>
     </head>
     <body class="bg-pink-200 h-96 w-1/4 m-16">
         <h1 class="text-3xl font-bold text-red-900 text-center pt-8">Submit Form</h1>
         <h2 class="text-2xl font-bold text-rose-500 text-center mt-8 pb-8">Enter you password below</h2>
         <div class="flex flex items-center">
-            <input class="w-24 h-8 m-4" id="pwd">
+            <input class="w-24 h-8 m-4 border-2 border-red-600 " id="pwd">
             <button class="border-2 h-8 w-24 border-blue-700 bg-green-800 text-white m-4" onclick="lcCheck();ucCheck();numCheck();lenCheck()">Submit</button>
             <button class="border-2 h-8 w-24 border-green-700 bg-blue-700 text-white" onclick="clrCheck()">Clear</button>
         </div>
